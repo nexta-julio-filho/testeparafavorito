@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: #2AE04C;
+    border: none;
+    border-radius: 100px;
+    box-shadow: rgb(72 79 95 / 6%) 0px 2.25px 10.5px;
+    color: rgb(15, 2, 2);
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    height: 52px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin: 0px;
+    max-width: none;
+    padding: 14px 30px;
+    transition: all 0.3s ease 0s;
+    width: 300px;
+    text-align: center;
+    transition: transform 500ms cubic-bezier(.45,.97,.68,2.48);
+    text-decoration: none;
+    margin: 100px;
+}
+
+.btn:hover{
+    background: rgb(182, 71, 71);
+    color: #fff;
+}    
+
+
+    </style>
+
+
+
+
+
+
+<script language="JavaScript1.2">
+    var bookmarkurl="https://nextadelivery.app/"
+    var bookmarktitle="Nexta Delivery"
+    function addbookmark(){
+    if (document.all)
+    window.external.AddFavorite(bookmarkurl,bookmarktitle)
+    }
+    </script>
+
+
+
+
+
+
+</head>
+<body>
+    
+    <a class="btn" href="javascript:addbookmark()">Adiciona o aplicativo Nexta Delivery</a>
+
+    
+
+
+
+
+
+
+
+    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+
+     <input class="btn" type="button" value="book mark me"
+    onclick="addBookmark('https://buffernow.com', 'buffer Now');"/>
+
+
+    <!-- <script type="text/javascript">
+    function addBookmark(url, title){
+    if (!url) {url = window.location}
+        if (!title) {title = document.title}
+        var browser=navigator.userAgent.toLowerCase();
+        
+        if (window.sidebar) { // Mozilla, Firefox, Netscape
+            window.sidebar.addPanel(title, url,"");
+        } else if( window.external) { // IE or chrome
+            if (browser.indexOf('chrome')==-1){ // ie
+                window.external.AddFavorite( url, title);
+            } else { // chrome
+               
+              alert('Pressione CTRL + D (ou Command + D para macs) para marcar esta página');
+               
+            }
+        }
+        else if(window.opera && window.print) { // Opera - automatically adds to sidebar if rel=sidebar in the tag
+            return true;
+        }
+        else if (browser.indexOf('konqueror')!=-1) { // Konqueror
+            // alert('Please press CTRL+B to bookmark this page.');
+        }
+        else if (browser.indexOf('webkit')!=-1){ // safari
+            // alert('Please press CTRL+B (or Command+D for macs) to bookmark this page.');
+        } else {
+            // alert('Your browser cannot add bookmarks using this link. Please add this link manually.')
+            
+        }
+    } 
+    
+       </script>                  -->
+
+      
+                        <script>
+                            function addFav(){
+                                if (window.sidebar && window.sidebar.addPanel) { // Mozilla Firefox Bookmark
+                                window.sidebar.addPanel(document.title, window.location.href, '');
+                                } else if (window.external && ('AddFavorite' in window.external)) { // IE Favorite
+                                // window.external.AddFavorite(location.href, document.title);
+                                // } else if (window.opera && window.print) { // Opera Hotlist
+                                // this.title = document.title;
+                                return true;
+                                } else { // webkit - safari/chrome
+                                   alert('Press ' + (navigator.userAgent.toLowerCase().indexOf('mac') != -1 ? 'Command/Cmd' : 'CTRL') + ' + D to bookmark this page.');
+                                }
+                                }
+                               
+                        </script>
+                    
+                    <a onclick="addFav();">Adicionar aos favoritores</a>
+
+    
+ 
+</body>
+</html>
